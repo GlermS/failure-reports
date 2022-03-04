@@ -9,8 +9,20 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         body{
+            min-height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .content{
             height: 100%;
             width: 100%;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -20,6 +32,17 @@
             background-color: orange;
             color: #FFFFFF;
             font-size: 1.05rem;
+        }
+        .footer{
+            width: 100%;
+            background-color: rgb(73, 73, 73);
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .footer img{
+            width: 7.5rem;
+            margin: 1rem;
         }
 
         .dropdown-content {
@@ -49,22 +72,27 @@
     </style>
     </head>
     <body>
-        <h1>Failure Reports</h1>
-        <div class="dropdown">
-            <button>Choose a report:</button>
-        
-            <div class="dropdown-content">
-                <a href="https://app.powerbi.com/reportEmbed?reportId=253f3b07-89e1-4bc1-81f1-527119ac72fe&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Barreiras</a>
-                <a href="https://app.powerbi.com/reportEmbed?reportId=646b36d1-ec0a-4c1f-b7eb-4c7eb3fabebc&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Sao Pedro</a>
-                <a href="https://app.powerbi.com/reportEmbed?reportId=6a8e043a-4c12-47d9-87be-693ff03900af&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Juazeiro</a>
-                <a href="https://app.powerbi.com/reportEmbed?reportId=1087ed3f-fb75-4312-bf0e-79f1affdfe53&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Sol do Futuro</a>
-                <a href="https://app.powerbi.com/reportEmbed?reportId=7ddaac4f-b31b-45da-be26-1da702468c24&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Javiera</a>
-                <a href="https://app.powerbi.com/reportEmbed?reportId=2bc4a5ba-1065-462d-9e91-637173be146b&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Quilapilun</a>
-                <a href="https://app.powerbi.com/reportEmbed?reportId=b0676b1b-e091-421f-9119-106b3229635b&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Litoral</a>
-                <a href="https://app.powerbi.com/reportEmbed?reportId=8e87319f-424d-4011-bced-612e276e2cb1&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Naranjal</a>
+        <div class="content">
+            <h1>Failure Reports</h1>
+            <div class="dropdown">
+                <button>Choose a report:</button>
+            
+                <div class="dropdown-content">
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=253f3b07-89e1-4bc1-81f1-527119ac72fe&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Barreiras</a>
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=646b36d1-ec0a-4c1f-b7eb-4c7eb3fabebc&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Sao Pedro</a>
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=6a8e043a-4c12-47d9-87be-693ff03900af&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Juazeiro</a>
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=1087ed3f-fb75-4312-bf0e-79f1affdfe53&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Sol do Futuro</a>
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=7ddaac4f-b31b-45da-be26-1da702468c24&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Javiera</a>
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=2bc4a5ba-1065-462d-9e91-637173be146b&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Quilapilun</a>
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=b0676b1b-e091-421f-9119-106b3229635b&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Litoral</a>
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=8e87319f-424d-4011-bced-612e276e2cb1&autoAuth=true&ctid=a9b1381c-55e9-43ed-8e36-10751787678d&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D">Naranjal</a>
+                </div>
             </div>
         </div>
-   
+        
+        <div class="footer">
+            <img src="https://atlasrenewableenergy.com/wp-content/uploads/atlas-renewable-energy-logo-300x205.png"></img>
+        </div>
     </body>
     
 </html>
